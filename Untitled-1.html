@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        .main {
+            height: 100vh;
+            width: 100%;
+            background-color: black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: 1px solid;
+        }
+
+        .childbox {
+            height: 73vh;
+            width: 34%;
+            display: flex;
+            flex-direction: column;
+            box-shadow: 2px 2px 5px 10px white;
+            border-radius: 10px;
+            border: 1px solid white;
+
+
+        }
+
+        .box {
+            height: 50px;
+            width: 50px;
+            transition: all 0.30s ease-in-out;
+            cursor: pointer;
+            border: 1px solid white;
+
+        }
+
+        .longdiv {
+            display: flex;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main">
+        <div class="childbox">
+
+            <div class="longdiv">
+                <div class="box"></div>
+                <div class="box"></div>
+                <div class="box"></div>
+                <div class="box"></div>
+                <div class="box"></div>
+                <div class="box"></div>
+                <div class="box"></div>
+                <div class="box"></div>
+                <div class="box"></div>
+                <div class="box"></div>
+            </div>
+            <div class="longdiv">
+                <div class="box"></div>
+                <div class="box"></div>
+                <div class="box"></div>
+                <div class="box"></div>
+                <div class="box"></div>
+                <div class="box"></div>
+                <div class="box"></div>
+                <div class="box"></div>
+                <div class="box"></div>
+                <div class="box"></div>
+            </div>
+            <div class="longdiv">
+                <div class="box"></div>
+                <div class="box"></div>
+                <div class="box"></div>
+                <div class="box"></div>
+                <div class="box"></div>
+                <div class="box"></div>
+                <div class="box"></div>
+                <div class="box"></div>
+                <div class="box"></div>
+                <div class="box"></div>
+            </div>
+            <div class="longdiv">
+                <div class="box"></div>
+                <div class="box"></div>
+                <div class="box"></div>
+                <div class="box"></div>
+                <div class="box"></div>
+                <div class="box"></div>
+                <div class="box"></div>
+                <div class="box"></div>
+                <div class="box"></div>
+                <div class="box"></div>
+            </div>
+            <div class="longdiv">
+                <div class="box"></div>
+                <div class="box"></div>
+                <div class="box"></div>
+                <div class="box"></div>
+                <div class="box"></div>
+                <div class="box"></div>
+                <div class="box"></div>
+                <div class="box"></div>
+                <div class="box"></div>
+                <div class="box"></div>
+            </div>
+            <div class="longdiv">
+                <div class="box"></div>
+                <div class="box"></div>
+                <div class="box"></div>
+                <div class="box"></div>
+                <div class="box"></div>
+                <div class="box"></div>
+                <div class="box"></div>
+                <div class="box"></div>
+                <div class="box"></div>
+                <div class="box"></div>
+            </div>
+            <div class="longdiv">
+                <div class="box"></div>
+                <div class="box"></div>
+                <div class="box"></div>
+                <div class="box"></div>
+                <div class="box"></div>
+                <div class="box"></div>
+                <div class="box"></div>
+                <div class="box"></div>
+                <div class="box"></div>
+                <div class="box"></div>
+            </div>
+            <div class="longdiv">
+                <div class="box"></div>
+                <div class="box"></div>
+                <div class="box"></div>
+                <div class="box"></div>
+                <div class="box"></div>
+                <div class="box"></div>
+                <div class="box"></div>
+                <div class="box"></div>
+                <div class="box"></div>
+                <div class="box"></div>
+            </div>
+            <div class="longdiv">
+                <div class="box"></div>
+                <div class="box"></div>
+                <div class="box"></div>
+                <div class="box"></div>
+                <div class="box"></div>
+                <div class="box"></div>
+                <div class="box"></div>
+                <div class="box"></div>
+                <div class="box"></div>
+                <div class="box"></div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let longdiv1 = document.querySelectorAll(".longdiv")
+        // console.log(longdiv1);
+
+        let boxe = document.querySelectorAll(".box")
+        console.log(boxe);
+
+        function random(colors) {
+            return Math.floor(Math.random() * colors);
+            
+        }
+        function background() {
+
+            let rnd = 'rgb(' + random(255) + ',' + random(255) + ',' + random(255) + ')'
+            console.log();
+
+            return rnd;
+
+        }
+        for (let i = 0; i < boxe.length; i++) {
+            console.log(boxe);
+            boxe[i].addEventListener("mouseenter", function (e) {
+
+                e.target.style.backgroundColor = background();
+                e.target.style.transition = "all 0.30s ease-in-out"
+
+            })
+            boxe[i].addEventListener("mouseleave", function (e) {
+
+                e.target.style.backgroundColor = "black";
+
+            })
+
+        }
+
+
+
+
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>
